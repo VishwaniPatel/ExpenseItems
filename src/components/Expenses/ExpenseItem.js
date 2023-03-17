@@ -6,15 +6,17 @@ function ExpenseItem(props) {
   const [title, setTitle] = useState(props.title);
   // let title = props.title;
   return (
-    <Card className="expense-item">
-      {/* <div>{props.date.toLocaleString("en-US", { month: "long" })}</div> */}
-      {/* <div>{props.date.toISOString()}</div> */}
-      <ExpenseDate date={props.date} />
-      <div className="expense-item__description">
-        <h2>{props.title}</h2>
-        <div className="expense-item__price">${props.amount}</div>
-      </div>
-    </Card>
+    <li>
+      <Card className="expense-item">
+        {/* <div>{props.date.toLocaleString("en-US", { month: "long" })}</div> */}
+        {/* <div>{props.date.toISOString()}</div> */}
+        <ExpenseDate date={props.date} />
+        <div className="expense-item__description">
+          <h2>{props.title}</h2>
+          <div className="expense-item__price">${props.amount}</div>
+        </div>
+      </Card>
+    </li>
   );
 }
 
